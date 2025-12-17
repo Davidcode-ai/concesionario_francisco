@@ -54,7 +54,6 @@
         /* --- HERO (ESCAPARATE LUJOSO) --- */
         .hero {
             height: 90vh;
-            /* Foto de concesionario de lujo o coche deportivo */
             background-image: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1562519819-016930ada31b?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
@@ -67,15 +66,19 @@
         .hero h1 { font-size: 3.5rem; color: var(--platinum); line-height: 1.1; margin-bottom: 20px; }
         .hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 30px; border-left: 4px solid var(--metallic-red); padding-left: 20px; }
         
+        /* CORRECCIÓN AQUÍ: Botón ajustado para que no corte el texto */
         .btn-sport {
             background-color: var(--metallic-red);
             color: white;
             padding: 15px 40px;
             font-weight: 700;
             text-decoration: none;
-            clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%); /* Forma agresiva */
+            /* Cambiado de 10% a 30px para asegurar que el texto no se corte en PC */
+            clip-path: polygon(30px 0, 100% 0, 100% 100%, 0% 100%); 
             display: inline-block;
             transition: 0.3s;
+            text-align: center; /* Asegura centrado */
+            min-width: 200px;   /* Anchura mínima para presencia */
         }
         .btn-sport:hover { background-color: white; color: var(--metallic-red); }
 
@@ -95,7 +98,7 @@
             border-radius: 5px;
             overflow: hidden;
             transition: transform 0.3s;
-            cursor: pointer; /* Manita al pasar por encima */
+            cursor: pointer;
             position: relative;
         }
 
@@ -116,7 +119,7 @@
 
         /* --- TALLER (SECCIÓN DIFERENCIADA) --- */
         #taller {
-            background-color: var(--platinum); /* Fondo claro para diferenciar */
+            background-color: var(--platinum);
             color: var(--asphalt);
             padding: 80px 5%;
             text-align: center;
@@ -131,7 +134,7 @@
 
         /* --- MODAL (LA FICHA DEL COCHE) --- */
         .modal {
-            display: none; /* Oculto por defecto */
+            display: none;
             position: fixed; z-index: 2000;
             left: 0; top: 0; width: 100%; height: 100%;
             background-color: rgba(0,0,0,0.9);
@@ -160,7 +163,7 @@
         /* --- CONTACTO --- */
         #contacto { padding: 60px 5%; background: #111; text-align: center; }
         .map-container { margin-top: 30px; height: 300px; background: #333; }
-        iframe { width: 100%; height: 100%; border: 0; filter: invert(90%); } /* Mapa oscuro */
+        iframe { width: 100%; height: 100%; border: 0; filter: invert(90%); }
 
         /* --- WHATSAPP --- */
         .whatsapp-float {
@@ -278,7 +281,7 @@
 
     <div id="carModal" class="modal">
         <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <span class="close-btn" onclick="closeModal()">×</span>
             <img id="modalImg" src="" class="modal-img">
             <h2 id="modalTitle" class="modal-title">Título Coche</h2>
             <h3 id="modalPrice" style="color: var(--metallic-red); margin-bottom: 15px;">00.000€</h3>
