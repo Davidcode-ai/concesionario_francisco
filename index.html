@@ -3,16 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motor Elite - Vehículos de Ocasión y Taller</title>
+    
+    <title>Talleres Torrente | Coches de Ocasión y Taller en Vélez Rubio</title>
+    
+    <meta name="description" content="Compra tu coche de segunda mano garantizado en Vélez Rubio (Almería). Talleres Torrente: Concesionario multimarca, taller mecánico, electricidad y maquinaria agrícola.">
+    
+    <meta name="keywords" content="coches segunda mano vélez rubio, taller mecánico almería, vehículos ocasión, compraventa coches, talleres torrente">
+    
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Talleres Torrente - Vehículos Garantizados">
+    <meta property="og:description" content="Encuentra tu coche ideal revisado y con garantía en Vélez Rubio. Taller propio y servicio premium.">
+    <meta property="og:image" content="bmw2.jpeg"> <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;600;800&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-        /* --- ESTÉTICA PREMIUM AUTOMOTIVE --- */
+        /* --- ESTÉTICA MOTOR ELITE --- */
         :root {
-            --asphalt: #1a1a1a;      /* Negro Asfalto */
-            --carbon: #2d2d2d;       /* Gris Carbono (Tarjetas) */
-            --metallic-red: #D90429; /* Rojo Deportivo (Acción) */
-            --silver: #e0e0e0;       /* Texto claro */
+            --asphalt: #121212;      /* Negro Fondo */
+            --carbon: #1e1e1e;       /* Gris Tarjetas */
+            --metallic-red: #D90429; /* Rojo Sport */
+            --silver: #e0e0e0;       /* Texto */
             --platinum: #ffffff;     /* Títulos */
             --whatsapp: #25D366;
         }
@@ -24,167 +38,175 @@
             background-color: var(--asphalt);
             color: var(--silver);
             line-height: 1.6;
+            padding-bottom: 50px;
+            /* EVITA EL SALTO LATERAL EN EL MÓVIL */
+            overflow-x: hidden;
         }
 
-        h1, h2, h3 {
-            font-family: 'Exo 2', sans-serif;
-            text-transform: uppercase;
-            font-style: italic; /* Velocidad */
-        }
+        h1, h2, h3 { font-family: 'Exo 2', sans-serif; text-transform: uppercase; font-style: italic; }
 
         /* --- NAVBAR --- */
         .navbar {
-            background: rgba(0,0,0,0.9);
-            padding: 20px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 2px solid var(--metallic-red);
+            background: rgba(18, 18, 18, 0.98);
+            padding: 15px 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            position: sticky; top: 0; z-index: 1000;
+            border-bottom: 3px solid var(--metallic-red);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.8);
         }
 
-        .logo { font-size: 1.8rem; font-weight: 800; color: var(--platinum); }
+        .logo { font-size: 1.6rem; font-weight: 800; color: var(--platinum); letter-spacing: 1px; }
         .logo span { color: var(--metallic-red); }
         
-        .nav-links a { margin-left: 20px; color: var(--silver); text-decoration: none; font-weight: 600; transition: 0.3s;}
+        .nav-links a { margin-left: 20px; color: var(--silver); text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: 0.3s; text-transform: uppercase;}
         .nav-links a:hover { color: var(--metallic-red); }
 
-        /* --- HERO (ESCAPARATE LUJOSO) --- */
+        /* --- HERO --- */
         .hero {
-            height: 90vh;
-            background-image: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1562519819-016930ada31b?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-left: 10%;
+            height: 80vh;
+            /* FOTO DE PORTADA */
+            background-image: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.3)), url('bmw2.jpeg');
+            background-attachment: fixed; background-position: center; background-size: cover;
+            display: flex; flex-direction: column; justify-content: center; padding-left: 8%;
         }
 
-        .hero h1 { font-size: 3.5rem; color: var(--platinum); line-height: 1.1; margin-bottom: 20px; }
-        .hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 30px; border-left: 4px solid var(--metallic-red); padding-left: 20px; }
+        .hero h1 { font-size: 3.5rem; color: var(--platinum); line-height: 1.1; margin-bottom: 20px; text-shadow: 2px 2px 10px black; }
+        .hero p { font-size: 1.3rem; color: #ddd; max-width: 600px; margin-bottom: 30px; border-left: 5px solid var(--metallic-red); padding-left: 20px; background: rgba(0,0,0,0.6); padding: 15px 20px;}
         
-        /* CORRECCIÓN AQUÍ: Botón ajustado para que no corte el texto */
         .btn-sport {
-            background-color: var(--metallic-red);
-            color: white;
-            padding: 15px 40px;
-            font-weight: 700;
-            text-decoration: none;
-            /* Cambiado de 10% a 30px para asegurar que el texto no se corte en PC */
-            clip-path: polygon(30px 0, 100% 0, 100% 100%, 0% 100%); 
-            display: inline-block;
-            transition: 0.3s;
-            text-align: center; /* Asegura centrado */
-            min-width: 200px;   /* Anchura mínima para presencia */
+            background-color: var(--metallic-red); color: white; padding: 18px 50px;
+            font-weight: 800; text-decoration: none; clip-path: polygon(20px 0, 100% 0, 100% 100%, 0% 100%); 
+            display: inline-block; transition: 0.3s; text-align: center; font-size: 1.1rem;
         }
         .btn-sport:hover { background-color: white; color: var(--metallic-red); }
 
-        /* --- STOCK (LOS RECUADRITOS) --- */
-        #stock { padding: 80px 5%; }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: var(--platinum); }
+        /* --- STOCK --- */
+        #stock { padding: 80px 5%; background: linear-gradient(180deg, #121212 0%, #1a1a1a 100%); }
+        .section-title { text-align: center; font-size: 3rem; margin-bottom: 60px; color: var(--platinum); text-shadow: 0 0 20px rgba(255,255,255,0.1); }
         .section-title span { color: var(--metallic-red); }
 
-        .cars-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+        .cars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
 
         .car-card {
-            background-color: var(--carbon);
-            border-radius: 5px;
-            overflow: hidden;
-            transition: transform 0.3s;
-            cursor: pointer;
-            position: relative;
+            background-color: var(--carbon); border-radius: 8px; overflow: hidden;
+            transition: transform 0.3s; position: relative; border: 1px solid #333;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: flex; flex-direction: column; 
+            height: 100%; 
+        }
+        .car-card:hover { transform: translateY(-10px); border-color: var(--metallic-red); box-shadow: 0 20px 50px rgba(217, 4, 41, 0.2); }
+
+        /* CARRUSEL DE FOTOS */
+        .carousel { position: relative; width: 100%; height: 260px; overflow: hidden; border-bottom: 3px solid var(--metallic-red); flex-shrink: 0; }
+        .carousel-slides { display: flex; width: 100%; height: 100%; transition: transform 0.5s ease-in-out; }
+        .carousel-slides img { width: 100%; height: 100%; object-fit: cover; flex-shrink: 0; }
+        
+        .carousel-btn {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            background: rgba(0,0,0,0.7); color: white; border: none;
+            padding: 0; width: 40px; height: 40px; border-radius: 50%;
+            cursor: pointer; font-size: 1.2rem; z-index: 10;
+            display: flex; align-items: center; justify-content: center;
+            transition: 0.3s;
+        }
+        .carousel-btn:hover { background: var(--metallic-red); }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        .car-info { 
+            padding: 25px; 
+            display: flex; 
+            flex-direction: column; 
+            flex-grow: 1; 
+            justify-content: space-between; 
         }
 
-        .car-card:hover { transform: scale(1.03); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
-
-        .car-img { width: 100%; height: 200px; object-fit: cover; }
+        .car-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; min-height: 60px; }
+        .car-title { font-size: 1.5rem; margin: 0; color: white; font-weight: 800; line-height: 1.2; }
+        .car-price { font-size: 1.6rem; font-weight: 800; color: var(--metallic-red); white-space: nowrap; }
         
-        .car-info { padding: 20px; }
-        .car-title { font-size: 1.3rem; margin-bottom: 5px; color: white; }
-        .car-price { font-size: 1.5rem; font-weight: 800; color: var(--metallic-red); display: block; margin-bottom: 10px; }
-        .car-specs { font-size: 0.9rem; color: #aaa; display: flex; justify-content: space-between; border-top: 1px solid #444; padding-top: 10px; }
+        .car-specs { 
+            font-size: 0.95rem; color: #ccc; display: flex; justify-content: space-between; 
+            background: #151515; padding: 12px; border-radius: 5px; margin-bottom: 20px;
+        }
+        .spec-item i { color: var(--metallic-red); margin-right: 5px;}
 
         .btn-details {
-            display: block; width: 100%; text-align: center;
-            background: #444; color: white; padding: 10px; margin-top: 15px;
-            font-size: 0.9rem; font-weight: 600; text-transform: uppercase;
+            display: block; width: 100%; text-align: center; background: #333; color: white; padding: 15px;
+            font-size: 1rem; font-weight: 700; text-transform: uppercase; cursor: pointer; transition: 0.3s; border: none;
         }
+        .btn-details:hover { background: var(--platinum); color: black; }
 
-        /* --- TALLER (SECCIÓN DIFERENCIADA) --- */
-        #taller {
-            background-color: var(--platinum);
-            color: var(--asphalt);
-            padding: 80px 5%;
-            text-align: center;
+        /* --- TALLER --- */
+        #taller { background-color: #e5e5e5; color: var(--asphalt); padding: 80px 5%; text-align: center; }
+        #taller h2 { color: var(--asphalt); margin-bottom: 40px;}
+        .services-row { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+        .service-item { 
+            flex: 1; min-width: 250px; max-width: 300px; padding: 30px; 
+            background: white; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: 0.3s; border-bottom: 4px solid transparent;
         }
-
-        #taller h2 { color: var(--asphalt); }
-        
-        .services-row { display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap; }
-        
-        .service-item { flex: 1; min-width: 250px; max-width: 300px; padding: 20px; border: 1px solid #ddd; }
+        .service-item:hover { transform: translateY(-10px); border-bottom: 4px solid var(--metallic-red); }
         .icon { font-size: 3rem; color: var(--metallic-red); margin-bottom: 15px; }
 
-        /* --- MODAL (LA FICHA DEL COCHE) --- */
-        .modal {
-            display: none;
-            position: fixed; z-index: 2000;
-            left: 0; top: 0; width: 100%; height: 100%;
-            background-color: rgba(0,0,0,0.9);
-            justify-content: center; align-items: center;
-        }
-
-        .modal-content {
-            background-color: var(--carbon);
-            padding: 30px;
-            width: 90%; max-width: 600px;
-            border-radius: 8px;
-            position: relative;
-            text-align: left;
-            border: 2px solid var(--metallic-red);
-        }
-
-        .close-btn { position: absolute; top: 15px; right: 20px; font-size: 30px; cursor: pointer; color: white; }
-        
-        .modal-img { width: 100%; height: 300px; object-fit: cover; border-radius: 5px; margin-bottom: 20px; }
-        .modal-title { font-size: 2rem; color: white; margin-bottom: 10px; }
-        .modal-desc { margin-bottom: 20px; color: #ccc; }
-        
-        .modal-data { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; background: #222; padding: 15px; border-radius: 5px;}
-        .data-item strong { color: var(--metallic-red); display: block; font-size: 0.8rem; text-transform: uppercase;}
-
         /* --- CONTACTO --- */
-        #contacto { padding: 60px 5%; background: #111; text-align: center; }
-        .map-container { margin-top: 30px; height: 300px; background: #333; }
+        #contacto { padding: 80px 5%; background: #080808; text-align: center; border-top: 2px solid var(--metallic-red); }
+        .contact-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 50px; }
+        
+        .contact-btn-box {
+            background: #222; padding: 30px; border-radius: 8px; width: 300px;
+            text-decoration: none; color: white; transition: 0.3s; border: 1px solid #333;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+        }
+        .contact-btn-box:hover { background: var(--metallic-red); transform: translateY(-5px); border-color: var(--metallic-red); }
+        .contact-btn-box i { font-size: 2.5rem; margin-bottom: 15px; }
+        .contact-btn-box h3 { margin: 0 0 5px 0; font-size: 1.4rem; }
+        .contact-btn-box p { margin: 0; color: #ccc; font-size: 1.1rem; }
+        .contact-btn-box:hover p { color: white; }
+
+        .map-container { margin-top: 30px; height: 400px; background: #222; border: 2px solid #444; border-radius: 10px; overflow: hidden; }
         iframe { width: 100%; height: 100%; border: 0; filter: invert(90%); }
 
-        /* --- WHATSAPP --- */
-        .whatsapp-float {
-            position: fixed; bottom: 20px; right: 20px;
-            background: var(--whatsapp); color: white;
-            width: 60px; height: 60px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 30px; z-index: 100; box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+        /* --- MODAL --- */
+        .modal {
+            display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.98); justify-content: center; align-items: center; padding: 15px;
         }
+        .modal-content {
+            background-color: var(--carbon); width: 100%; max-width: 900px;
+            border-radius: 10px; position: relative; display: flex; flex-direction: column;
+            border: 2px solid var(--metallic-red); overflow: hidden; max-height: 95vh;
+        }
+        .close-btn { position: absolute; top: 15px; right: 20px; font-size: 40px; cursor: pointer; color: white; z-index: 20; text-shadow: 0 0 10px black; line-height: 0.5;}
+        
+        .modal-img-box { width: 100%; height: 400px; background: black; display: flex; justify-content: center; align-items: center; }
+        .modal-img { height: 100%; width: 100%; object-fit: contain; }
+        
+        .modal-body { padding: 30px; overflow-y: auto; }
+        .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #444; padding-bottom: 15px;}
+        .modal-data { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 25px; background: #151515; padding: 20px; border-radius: 8px; text-align: center;}
+        
+        .whatsapp-float {
+            position: fixed; bottom: 25px; right: 25px; background: var(--whatsapp); color: white;
+            width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 40px; z-index: 100; box-shadow: 0 0 20px rgba(37, 211, 102, 0.6); transition: 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
 
-        /* Responsive */
         @media(max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .nav-links { display: none; }
+            .modal-content { flex-direction: column; }
+            .modal-img-box { height: 250px; }
+            .modal-data { grid-template-columns: 1fr 1fr; }
+            .contact-grid { flex-direction: column; align-items: center; }
         }
     </style>
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">MOTOR<span>ELITE</span></div>
+        <div class="logo">TALLERES<span>TORRENTE</span></div>
         <div class="nav-links">
             <a href="#stock">Stock</a>
             <a href="#taller">Taller</a>
@@ -193,121 +215,369 @@
     </nav>
 
     <header class="hero">
-        <h1>LUJO Y POTENCIA <br>AL ALCANCE DE TU MANO</h1>
-        <p>Selección premium de vehículos de ocasión garantizados. Financiación a medida y taller propio multimarca.</p>
+        <h1>TU COCHE IDEAL<br>TE ESTÁ ESPERANDO</h1>
+        <p>Expertos en automoción en Vélez Rubio. Vehículos revisados, garantizados y taller propio para tu tranquilidad.</p>
         <a href="#stock" class="btn-sport">VER CATÁLOGO</a>
     </header>
 
     <section id="stock">
-        <h2 class="section-title">VEHÍCULOS <span>DESTACADOS</span></h2>
+        <h2 class="section-title">CATÁLOGO <span>COMPLETO</span></h2>
         
         <div class="cars-grid">
-            <div class="car-card" onclick="openModal('Audi A5 S-Line', '24.900€', '2019', '85.000 km', 'Diesel', 'Automático', 'https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=600&q=80', 'Impecable estado. Paquete S-Line interior y exterior, techo solar, navegador, faros Matrix LED. Garantía 12 meses.')">
-                <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=600&q=80" alt="Coche 1" class="car-img">
-                <div class="car-info">
-                    <h3 class="car-title">Audi A5 S-Line</h3>
-                    <span class="car-price">24.900€</span>
-                    <div class="car-specs">
-                        <span>2019</span>
-                        <span>Diesel</span>
-                        <span>Auto</span>
+            
+            <div class="car-card">
+                <div class="carousel" id="carousel-1">
+                    <div class="carousel-slides">
+                        <img src="bmw1.jpeg" alt="BMW X5 Ext">
+                        <img src="bmw2.jpeg" alt="BMW X5 Int">
                     </div>
-                    <span class="btn-details">+ VER FICHA TÉCNICA</span>
+                    <button class="carousel-btn prev" onclick="moveSlide('carousel-1', -1)">❮</button>
+                    <button class="carousel-btn next" onclick="moveSlide('carousel-1', 1)">❯</button>
+                </div>
+                <div class="car-info">
+                    <div class="car-header">
+                        <div>
+                            <h3 class="car-title">BMW X5 xDrive</h3>
+                            <span class="car-price">18.500€</span>
+                        </div>
+                    </div>
+                    <div class="car-specs">
+                        <div class="spec-item"><i class="fas fa-calendar"></i> 2012</div>
+                        <div class="spec-item"><i class="fas fa-gas-pump"></i> Diesel</div>
+                        <div class="spec-item"><i class="fas fa-cog"></i> Auto</div>
+                        <div class="spec-item"><i class="fas fa-road"></i> 190k</div>
+                    </div>
+                    <button class="btn-details" onclick="openModal('BMW X5 xDrive', '18.500€', '2012', '190.000 km', 'Diesel', 'Automático', 'bmw1.jpeg', 'Espectacular SUV premium. Interior en cuero negro impecable, navegador, faros de xenón. Mantenimiento al día en nuestro taller.')">VER FICHA TÉCNICA</button>
                 </div>
             </div>
 
-            <div class="car-card" onclick="openModal('BMW Serie 4 Gran Coupé', '27.500€', '2020', '60.000 km', 'Gasolina', 'Automático', 'https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=600&q=80', 'Unico propietario. Libro de revisiones en casa oficial. Asientos de cuero calefactables, Head-up display.')">
-                <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=600&q=80" alt="Coche 2" class="car-img">
-                <div class="car-info">
-                    <h3 class="car-title">BMW Serie 4</h3>
-                    <span class="car-price">27.500€</span>
-                    <div class="car-specs">
-                        <span>2020</span>
-                        <span>Gasolina</span>
-                        <span>Auto</span>
+            <div class="car-card">
+                <div class="carousel" id="carousel-2">
+                    <div class="carousel-slides">
+                        <img src="vw1.jpeg" alt="VW Frontal">
+                        <img src="vw2.jpeg" alt="VW Trasera">
+                        <img src="vw3.jpeg" alt="VW Lateral">
                     </div>
-                    <span class="btn-details">+ VER FICHA TÉCNICA</span>
+                    <button class="carousel-btn prev" onclick="moveSlide('carousel-2', -1)">❮</button>
+                    <button class="carousel-btn next" onclick="moveSlide('carousel-2', 1)">❯</button>
+                </div>
+                <div class="car-info">
+                    <div class="car-header">
+                        <div>
+                            <h3 class="car-title">VW Transporter T6</h3>
+                            <span class="car-price">22.900€</span>
+                        </div>
+                    </div>
+                    <div class="car-specs">
+                        <div class="spec-item"><i class="fas fa-calendar"></i> 2019</div>
+                        <div class="spec-item"><i class="fas fa-gas-pump"></i> Diesel</div>
+                        <div class="spec-item"><i class="fas fa-cog"></i> Manual</div>
+                        <div class="spec-item"><i class="fas fa-road"></i> 140k</div>
+                    </div>
+                    <button class="btn-details" onclick="openModal('VW Transporter T6', '22.900€', '2019', '140.000 km', 'Diesel', 'Manual', 'vw1.jpeg', 'Furgoneta ideal para trabajo o camper. Estado de chapa y pintura perfecto. Revisada 100%.')">VER FICHA TÉCNICA</button>
                 </div>
             </div>
 
-            <div class="car-card" onclick="openModal('Mercedes Clase A AMG', '22.000€', '2018', '90.000 km', 'Diesel', 'Manual', 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=600&q=80', 'Acabado AMG completo. Llantas 19 pulgadas, cámara trasera, sensores de aparcamiento, carplay. Recién revisado.')">
-                <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=600&q=80" alt="Coche 3" class="car-img">
-                <div class="car-info">
-                    <h3 class="car-title">Mercedes Clase A</h3>
-                    <span class="car-price">22.000€</span>
-                    <div class="car-specs">
-                        <span>2018</span>
-                        <span>Diesel</span>
-                        <span>Manual</span>
+            <div class="car-card">
+                <div class="carousel" id="carousel-3">
+                    <div class="carousel-slides">
+                        <img src="subaru1.jpeg" alt="Subaru Ext">
                     </div>
-                    <span class="btn-details">+ VER FICHA TÉCNICA</span>
+                    <button class="carousel-btn prev" onclick="moveSlide('carousel-3', -1)">❮</button>
+                    <button class="carousel-btn next" onclick="moveSlide('carousel-3', 1)">❯</button>
+                </div>
+                <div class="car-info">
+                    <div class="car-header">
+                        <div>
+                            <h3 class="car-title">Subaru Outback 4x4</h3>
+                            <span class="car-price">9.500€</span>
+                        </div>
+                    </div>
+                    <div class="car-specs">
+                        <div class="spec-item"><i class="fas fa-calendar"></i> 2010</div>
+                        <div class="spec-item"><i class="fas fa-gas-pump"></i> Diesel</div>
+                        <div class="spec-item"><i class="fas fa-cog"></i> Manual</div>
+                        <div class="spec-item"><i class="fas fa-road"></i> 180k</div>
+                    </div>
+                    <button class="btn-details" onclick="openModal('Subaru Outback AWD', '9.500€', '2010', '180.000 km', 'Diesel', 'Manual', 'subaru1.jpeg', 'El rey de la tracción total. Vehículo robusto y seguro. Bola de remolque incluida.')">VER FICHA TÉCNICA</button>
                 </div>
             </div>
+
+            <div class="car-card">
+                <div class="carousel" id="carousel-4">
+                    <div class="carousel-slides">
+                        <img src="opel1.jpeg" alt="Opel Ext">
+                    </div>
+                    <button class="carousel-btn prev" onclick="moveSlide('carousel-4', -1)">❮</button>
+                    <button class="carousel-btn next" onclick="moveSlide('carousel-4', 1)">❯</button>
+                </div>
+                <div class="car-info">
+                    <div class="car-header">
+                        <div>
+                            <h3 class="car-title">Opel Grandland X</h3>
+                            <span class="car-price">19.900€</span>
+                        </div>
+                    </div>
+                    <div class="car-specs">
+                        <div class="spec-item"><i class="fas fa-calendar"></i> 2018</div>
+                        <div class="spec-item"><i class="fas fa-gas-pump"></i> Diesel</div>
+                        <div class="spec-item"><i class="fas fa-cog"></i> Manual</div>
+                        <div class="spec-item"><i class="fas fa-road"></i> 85k</div>
+                    </div>
+                    <button class="btn-details" onclick="openModal('Opel Grandland X', '19.900€', '2018', '85.000 km', 'Diesel', 'Manual', 'opel1.jpeg', 'SUV moderno y tecnológico. Pantalla táctil, conectividad total. Consumo muy eficiente.')">VER FICHA TÉCNICA</button>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <div class="carousel" id="carousel-5">
+                    <div class="carousel-slides">
+                        <img src="nissan1.jpeg" alt="Nissan">
+                    </div>
+                    <button class="carousel-btn prev" onclick="moveSlide('carousel-5', -1)">❮</button>
+                    <button class="carousel-btn next" onclick="moveSlide('carousel-5', 1)">❯</button>
+                </div>
+                <div class="car-info">
+                    <div class="car-header">
+                        <div>
+                            <h3 class="car-title">Nissan X-Trail</h3>
+                            <span class="car-price">17.900€</span>
+                        </div>
+                    </div>
+                    <div class="car-specs">
+                        <div class="spec-item"><i class="fas fa-calendar"></i> 2017</div>
+                        <div class="spec-item"><i class="fas fa-gas-pump"></i> Diesel</div>
+                        <div class="spec-item"><i class="fas fa-cog"></i> Manual</div>
+                        <div class="spec-item"><i class="fas fa-road"></i> 110k</div>
+                    </div>
+                    <button class="btn-details" onclick="openModal('Nissan X-Trail', '17.900€', '2017', '110.000 km', 'Diesel', 'Manual', 'nissan1.jpeg', 'El familiar perfecto. Techo panorámico, fiable y muy espacioso.')">VER FICHA TÉCNICA</button>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <div class="carousel" id="carousel-6">
+                    <div class="carousel-slides">
+                        <img src="toyota1.jpeg" alt="Toyota">
+                    </div>
+                    <button class="carousel-btn prev" onclick="moveSlide('carousel-6', -1)">❮</button>
+                    <button class="carousel-btn next" onclick="moveSlide('carousel-6', 1)">❯</button>
+                </div>
+                <div class="car-info">
+                    <div class="car-header">
+                        <div>
+                            <h3 class="car-title">Toyota Proace Verso</h3>
+                            <span class="car-price">24.500€</span>
+                        </div>
+                    </div>
+                    <div class="car-specs">
+                        <div class="spec-item"><i class="fas fa-calendar"></i> 2020</div>
+                        <div class="spec-item"><i class="fas fa-gas-pump"></i> Diesel</div>
+                        <div class="spec-item"><i class="fas fa-cog"></i> Manual</div>
+                        <div class="spec-item"><i class="fas fa-road"></i> 120k</div>
+                    </div>
+                    <button class="btn-details" onclick="openModal('Toyota Proace Verso', '24.500€', '2020', '120.000 km', 'Diesel', 'Manual', 'toyota1.jpeg', 'Monovolumen color Champagne. Ideal familias numerosas o VIP. Fiabilidad Toyota.')">VER FICHA TÉCNICA</button>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <div class="carousel" id="carousel-7">
+                    <div class="carousel-slides">
+                        <img src="opelcorsa1.jpeg" alt="Opel Corsa">
+                    </div>
+                    <button class="carousel-btn prev" onclick="moveSlide('carousel-7', -1)">❮</button>
+                    <button class="carousel-btn next" onclick="moveSlide('carousel-7', 1)">❯</button>
+                </div>
+                <div class="car-info">
+                    <div class="car-header">
+                        <div>
+                            <h3 class="car-title">Opel Corsa Eco</h3>
+                            <span class="car-price">4.500€</span>
+                        </div>
+                    </div>
+                    <div class="car-specs">
+                        <div class="spec-item"><i class="fas fa-calendar"></i> 2012</div>
+                        <div class="spec-item"><i class="fas fa-gas-pump"></i> Diesel</div>
+                        <div class="spec-item"><i class="fas fa-cog"></i> Manual</div>
+                        <div class="spec-item"><i class="fas fa-road"></i> 150k</div>
+                    </div>
+                    <button class="btn-details" onclick="openModal('Opel Corsa Eco', '4.500€', '2012', '150.000 km', 'Diesel', 'Manual', 'opelcorsa1.jpeg', 'Utilitario económico. Consumo muy bajo, ideal para ciudad o conductor novel. Color verde metalizado.')">VER FICHA TÉCNICA</button>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <div class="carousel" id="carousel-8">
+                    <div class="carousel-slides">
+                        <img src="fiat.jpeg" alt="Fiat Punto">
+                    </div>
+                    <button class="carousel-btn prev" onclick="moveSlide('carousel-8', -1)">❮</button>
+                    <button class="carousel-btn next" onclick="moveSlide('carousel-8', 1)">❯</button>
+                </div>
+                <div class="car-info">
+                    <div class="car-header">
+                        <div>
+                            <h3 class="car-title">Fiat Punto Evo</h3>
+                            <span class="car-price">3.900€</span>
+                        </div>
+                    </div>
+                    <div class="car-specs">
+                        <div class="spec-item"><i class="fas fa-calendar"></i> 2011</div>
+                        <div class="spec-item"><i class="fas fa-gas-pump"></i> Gasolina</div>
+                        <div class="spec-item"><i class="fas fa-cog"></i> Manual</div>
+                        <div class="spec-item"><i class="fas fa-road"></i> 130k</div>
+                    </div>
+                    <button class="btn-details" onclick="openModal('Fiat Punto Evo', '3.900€', '2011', '130.000 km', 'Gasolina', 'Manual', 'fiat.jpeg', 'Coche práctico y manejable. 5 puertas. Mantenimiento barato y etiqueta medioambiental.')">VER FICHA TÉCNICA</button>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <section id="taller">
-        <h2 class="section-title" style="color:#1a1a1a;">SERVICIO DE <span>TALLER</span></h2>
-        <p>No solo vendemos coches, los cuidamos. Taller propio especializado.</p>
+        <h2 class="section-title" style="color:#1a1a1a;">TALLER <span>PROPIO</span></h2>
+        <p style="margin-bottom: 40px; font-size: 1.1rem;">Compre con la tranquilidad de tener nuestro respaldo mecánico.</p>
         
         <div class="services-row">
             <div class="service-item">
-                <div class="icon">🔧</div>
+                <div class="icon"><i class="fas fa-tractor"></i></div>
+                <h3>Maquinaria Agrícola</h3>
+                <p>Especialistas en la zona.</p>
+            </div>
+            <div class="service-item">
+                <div class="icon"><i class="fas fa-wrench"></i></div>
                 <h3>Mecánica General</h3>
-                <p>Diagnosis, culatas, distribuciones y embragues.</p>
+                <p>Reparaciones y diagnosis.</p>
             </div>
             <div class="service-item">
-                <div class="icon">🛞</div>
-                <h3>Neumáticos</h3>
-                <p>Alineación 3D y equilibrado. Primeras marcas.</p>
+                <div class="icon"><i class="fas fa-bolt"></i></div>
+                <h3>Electricidad</h3>
+                <p>Baterías y electrónica.</p>
             </div>
             <div class="service-item">
-                <div class="icon">🧼</div>
-                <h3>Detailing</h3>
-                <p>Limpieza integral y pulido de carrocería.</p>
+                <div class="icon"><i class="fas fa-snowflake"></i></div>
+                <h3>Aire Acondicionado</h3>
+                <p>Carga y reparación.</p>
             </div>
         </div>
-        <br><br>
-        <a href="https://wa.me/34000000000?text=Hola,%20quiero%20cita%20para%20taller" class="btn-sport">PEDIR CITA TALLER</a>
     </section>
 
     <section id="contacto">
-        <h2 class="section-title">VEN A VISITARNOS</h2>
-        <p>Estamos en el Polígono Industrial de Vejer</p>
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12759.563604928522!2d-5.9686005!3d36.2526008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c24c7c8c8c8c9%3A0x0!2zMzbCsDE1JzA5LjQiTiA1wrA1OCcwNy4wIlc!5e0!3m2!1ses!2ses!4v1600000000000!5m2!1ses!2ses" allowfullscreen="" loading="lazy"></iframe>
+        <h2 class="section-title" style="margin-bottom: 40px;">¿HABLAMOS?</h2>
+        
+        <div class="contact-grid">
+            <a href="tel:636143727" class="contact-btn-box">
+                <i class="fas fa-phone-volume"></i>
+                <h3>LLÁMANOS</h3>
+                <p>636 14 37 27</p>
+            </a>
+
+            <a href="https://www.google.com/maps/dir//Talleres+Torrente+Velez+Rubio" target="_blank" class="contact-btn-box">
+                <i class="fas fa-map-marked-alt"></i>
+                <h3>CÓMO LLEGAR</h3>
+                <p>Avda. Andalucía, 174</p>
+            </a>
         </div>
+        
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.578688463875!2d-2.075!3d37.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd65355555555555%3A0x5555555555555555!2sV%C3%A9lez-Rubio%2C%20Almer%C3%ADa!5e0!3m2!1ses!2ses!4v1680000000000!5m2!1ses!2ses" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <p style="color:#555; margin-top:30px">© 2025 Talleres Torrente. Vélez Rubio.</p>
     </section>
 
     <div id="carModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">×</span>
-            <img id="modalImg" src="" class="modal-img">
-            <h2 id="modalTitle" class="modal-title">Título Coche</h2>
-            <h3 id="modalPrice" style="color: var(--metallic-red); margin-bottom: 15px;">00.000€</h3>
-            
-            <div class="modal-data">
-                <div class="data-item"><strong>Año</strong> <span id="modalYear">2020</span></div>
-                <div class="data-item"><strong>Km</strong> <span id="modalKm">0 km</span></div>
-                <div class="data-item"><strong>Motor</strong> <span id="modalFuel">Diesel</span></div>
-                <div class="data-item"><strong>Cambio</strong> <span id="modalGear">Auto</span></div>
+            <div class="modal-img-box">
+                <img id="modalImg" src="" class="modal-img">
             </div>
+            <div class="modal-body">
+                <div class="modal-header">
+                    <h2 id="modalTitle" style="color:white; margin:0;">Modelo</h2>
+                    <h2 id="modalPrice" style="color:var(--metallic-red); margin:0;">0€</h2>
+                </div>
+                
+                <div class="modal-data">
+                    <div><strong style="color:#aaa; font-size:0.8rem">AÑO</strong><br><span id="modalYear" style="color:white; font-weight:bold">2020</span></div>
+                    <div><strong style="color:#aaa; font-size:0.8rem">KM</strong><br><span id="modalKm" style="color:white; font-weight:bold">0</span></div>
+                    <div><strong style="color:#aaa; font-size:0.8rem">MOTOR</strong><br><span id="modalFuel" style="color:white; font-weight:bold">D</span></div>
+                    <div><strong style="color:#aaa; font-size:0.8rem">CAMBIO</strong><br><span id="modalGear" style="color:white; font-weight:bold">M</span></div>
+                </div>
 
-            <p id="modalDesc" class="modal-desc">Descripción detallada...</p>
+                <p id="modalDesc" style="color:#ccc; margin-bottom:25px; line-height:1.6;">Descripción...</p>
 
-            <a id="whatsappBtn" href="#" class="btn-sport" style="width: 100%; text-align: center;">ME INTERESA ESTE COCHE</a>
+                <a id="whatsappBtn" href="#" class="btn-sport" style="width: 100%; text-align: center; border-radius: 5px;">
+                    <i class="fab fa-whatsapp"></i> ME INTERESA ESTE COCHE
+                </a>
+            </div>
         </div>
     </div>
 
-    <a href="https://wa.me/34000000000" class="whatsapp-float">
-        <svg width="35" height="35" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    <a href="https://wa.me/34636143727" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
     </a>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoDealer",
+      "name": "Talleres Torrente",
+      "image": "bmw2.jpeg",
+      "telephone": "+34636143727",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avda. Andalucía, 174",
+        "addressLocality": "Vélez Rubio",
+        "addressRegion": "Almería",
+        "postalCode": "04820",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.6485,
+        "longitude": -2.0736
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "20:00"
+      },
+      "priceRange": "$$"
+    }
+    </script>
+
     <script>
+        // --- LÓGICA CARRUSEL ---
+        function moveSlide(carouselId, direction) {
+            const carousel = document.getElementById(carouselId);
+            const slidesContainer = carousel.querySelector('.carousel-slides');
+            const totalSlides = slidesContainer.children.length;
+            
+            // Leemos el índice actual del atributo data-index (o 0 si no existe)
+            let currentIndex = parseInt(carousel.getAttribute('data-index') || 0);
+            
+            // Calculamos el nuevo índice
+            let newIndex = currentIndex + direction;
+            
+            // Bucle infinito
+            if (newIndex >= totalSlides) newIndex = 0;
+            if (newIndex < 0) newIndex = totalSlides - 1;
+            
+            // Movemos el contenedor
+            slidesContainer.style.transform = `translateX(-${newIndex * 100}%)`;
+            
+            // Guardamos el nuevo índice
+            carousel.setAttribute('data-index', newIndex);
+        }
+
+        // --- LÓGICA MODAL ---
         const modal = document.getElementById("carModal");
 
         function openModal(title, price, year, km, fuel, gear, imgUrl, desc) {
-            // Llenar los datos del modal dinámicamente
             document.getElementById("modalTitle").innerText = title;
             document.getElementById("modalPrice").innerText = price;
             document.getElementById("modalYear").innerText = year;
@@ -317,8 +587,7 @@
             document.getElementById("modalImg").src = imgUrl;
             document.getElementById("modalDesc").innerText = desc;
             
-            // Link de WhatsApp personalizado para ese coche
-            document.getElementById("whatsappBtn").href = `https://wa.me/34000000000?text=Hola,%20me%20interesa%20el%20${title}%20por%20${price}`;
+            document.getElementById("whatsappBtn").href = `https://wa.me/34636143727?text=Hola,%20estoy%20interesado%20en%20el%20${title}%20por%20${price}`;
 
             modal.style.display = "flex";
         }
@@ -327,7 +596,6 @@
             modal.style.display = "none";
         }
 
-        // Cerrar si se pincha fuera del contenido
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
